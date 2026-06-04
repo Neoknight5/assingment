@@ -1,0 +1,309 @@
+#1. Print Introduction
+name = input("enter your name :")
+age = input("enter your age :")
+city = input("enter your city name:")
+print(f"your name : {name} \n your age :{age} \n your city {city} ")
+
+
+#3. Even or Odd
+#Take a number from user and check whether it is even or odd.
+
+#2.basic calculator
+val1 = int(input("enter your first values :"))
+val2 = int(input("enter your second values :"))
+add = val1 + val2
+print(f"your addintion {add}")
+sub = val1 - val2
+print(f" your subtraction {sub}")
+mul = val1 *val2
+print(f"your multiplication {mul}")
+div = val1 / val2
+print(f"your division {div}")
+
+#3. Even or Odd
+num = int(input("enter your number :"))
+val = num % 2
+if val == 0 :
+	print("your number is even")
+elif val > 0 :
+	print("your number is odd")
+	
+#4. Largest Number
+
+val = int(input("enter your first number :"))
+val2 = int(input("enter your second number :"))
+if val > val2 :
+	print(f"your {val} is the largest ")
+elif val2 > val2:
+	print(f"your {val2} is the largets ")
+else :
+	print(":(")
+
+#5. Multiplication Table
+#Print multiplication table of a given number up to 10.
+val = int(input("enter your number :"))
+a =  0
+while a <= 10 :
+	table = val * a
+	a += 1
+	print(table)
+
+#6. Sum of Numbers
+#Find sum of numbers from 1 to 100 using loop.
+
+all = []
+num = 0 
+while num <= 100 :
+	num += 1
+	all.append(num)
+print(all)
+total = 0
+for val in all :
+	total += val
+print(total)
+
+. Count Vowels
+#Take a string from user and count vowels.
+word = input("enter yopur word :")
+vowel = "a e i o u"
+count = 0#7
+for val in vowel :
+	if val in word :
+		count += 1
+print(count)
+
+#8. Reverse String
+#Input: hello
+#Output: olleh
+
+word = input("Enter a word: ")
+print(word[::-1])
+
+#9. Palindrome Check
+#Check whether a string is palindrome.
+word = input("enter your word :")
+rev = word[::-1]
+if word == rev :
+	print("this word is palindrome")
+else:
+	print("this is not palindrome")
+
+#11. List Operations
+list = [20,10,30,40,50]
+a = 60
+list.append(a)
+print(list)
+list.remove(60)
+print(list)
+list.sort()
+print(list)
+
+#12. Find Largest Element in List
+list = [10,55,1,5]
+list.sort()
+a = len(list)-1
+b = list[a]
+print(f"this is the largest element {b}")
+
+#13. Multiply Two Lists
+list = [1,2,3,4]
+list2 = [5,6,7,8]
+a = [(list*list2) for list,list2 in zip (list,list2)]
+print(a)
+
+#14. Tuple Practice
+tup = (1,2,3,4,5)
+print(tup)
+a = tup[4]
+b = tup[0]
+print(f"last element {a}")
+print(f"fisr element {b} ")
+
+#15. Remove Duplicates Using Set
+set = {1,2,3,4,5,1,5,6}
+print(set)
+
+#16. Dictionary Practice
+student = { "name" : "neo" ,"age" : "15" ,}
+student.update({"grade" : "A"})
+print(student)
+student.update({"age":"16"})
+print(student)
+student.pop("age")
+print(student)
+
+#17. Student Marks Dictionary
+st_marks = {"pysice" : "90","chemistry":"75","math": "80"}
+p = st_marks["pysice"]
+c = st_marks["chemistry"]
+m = st_marks["math"]
+if p > c and p > m :
+	print(f"{p} is the highest marks ")
+elif c > p and c > m :
+	print(f"{c} is the highest marks ")
+elif m > p and m > c :
+	print(f"{m} is the highest marks ")
+	
+#18. Function: Add Numbers # a + b
+def add(a,b):
+	d = a + b
+	print(f"your added value {d}")
+add(5,5)
+
+#20. Function: Count Vowels # copy code
+def fun():
+	word = input("enter yopur word :")
+	vowel = "a e i o u"
+	count = 0
+	for val in vowel :
+		if val in word :
+			count += 1
+	print(count)
+fun( )
+
+#21. Create Custom Module
+task = input("enter your task to do between / add /subtract/ multiply/ divide")
+a = int(input("enter your first number :"))
+b = int(input("enter your second number :"))
+def add(a,b):
+	final = a +b
+	print(f"{final} this is your final value")
+def sub(a,b):
+	final = a -b
+	print(f"{final} this is your final value")
+def div(a,b):
+	final = a /b
+	print(f"{final} this is your final value")
+def mul(a,b):
+	final = a *b
+	print(f"{final} this is your final value")
+if task == "add":
+	add(a,b)
+elif task == "subtract":
+	sub(a,b)
+elif task == "divide":
+	div(a,b)
+elif task == "multiply":
+	mul(a,b)
+else :
+	print(":(")	
+	
+#22. Greeting Modul
+name = input("enter your name :")
+print(f"hello {name}")
+
+import random
+val = random.randint(1,100)
+print(val)
+
+#24. Dice Simulator (1-6)
+import random
+end = True
+while end :
+	ask = input("enter spin to spin your dice or end to exit :")
+	if ask == "spin":
+		num = random.randint(1,6)
+		print(f"your dice number is {num}")
+	elif ask == "end":
+		end = False
+		print("______________________")
+	else:
+		end = False
+		print("______________________")
+	
+#25. Random Password Generator
+import random
+password = random.randint(1000,9000)
+print(f"{password} this is your password chande in 60 sec ")
+time = 0
+while time <= 60 :
+	time += 1
+	print(time)
+	if time == 60 :
+		password = random.randint(1000,9000)
+		print("your password is changed now !")
+
+#26. Current Date & Time
+import datetime
+x = datetime.datetime.now()
+print(x)
+
+#27. Extract Date Components
+#- year
+#- month
+#- day
+#- hour
+#- minute
+#- second
+import datetime
+x = datetime.datetime.today()
+print(x.year)
+print(x.month)
+print(x.day)
+print(x.hour)
+print(x.minute)
+print(x.second)
+
+#29. Digital Clock using time.sleep(1)
+import time
+t = int(input("enter your waiting time in seconds : "))
+print("time is started !")
+time.sleep(t)
+print("________________________________")
+print("your time is ended")
+
+
+#30. Stopwatch
+import time 
+input("enter to start :")
+start = time.time()
+input("enter to stop :")
+end = time.time()
+time = start - end
+print(f"{time:.2f}")
+
+#Mini Project (Mandatory)
+#Student Management System
+student = " neo, rud ,tej"
+print(student)
+student += "amis"
+print(student)
+val = input("enter view to  view student :")
+if val == "view":
+	print(student)
+search = input("enter name of student to search :")
+name = student.find(search)
+if name == True :
+	print("it is in the data ")
+else :
+	print("it is not in the data")
+remove = input("enter student name to delete student :")
+
+student.replace(remove," ")
+print(student)
+
+#Bonus Project
+#Number Guessing Game
+#- Generate random number
+#- Too High / Too Low hints
+#- Show total attempts
+#Number Guessing Game 
+import random
+secret = random.randint(1,100)
+attempt = 1
+run = True
+while run :
+	guess = int(input("enter your guess number :"))
+	print(f"your attempts {attempt}")
+	print("________________________________")
+	if guess > secret :
+		attempt += 1
+		print("to high")
+	elif guess < secret :
+		attempt += 1
+		print("too low")
+	elif guess == secret :
+		run = False
+		print("________you won__________")
+ 
+	
